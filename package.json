@@ -1,22 +1,11 @@
 {
-  "name": "@coreui/coreui-free-angular-admin-template",
-  "version": "2.13.0",
-  "description": "CoreUI Free Angular 13 Admin Template",
+  "name": "@ayoub-ouichen/blog-personnel",
+  "description": "this project represents a BMS (blog management system) which allows the user to publish his blogs, this project is developed by angular 13 and Node.js",
   "author": {
-    "name": "Łukasz Holeczek",
-    "url": "http://holeczek.pl",
-    "github": "https://github.com/mrholek",
-    "twitter": "https://twitter.com/lukaszholeczek"
+    "name": "Ouichen Ayoub",
+    "github": "https://github.com/ayoub-ouichen/",
+    "linkedin": "https://www.linkedin.com/in/ayoub-ouichen-46388b231/"
   },
-  "contributors": [
-    {
-      "name": "Andrzej Kopański",
-      "url": "https://github.com/xidedix"
-    }
-  ],
-  "homepage": "https://coreui.io/angular",
-  "copyright": "Copyright 2017-2022 creativeLabs Łukasz Holeczek",
-  "license": "MIT",
   "scripts": {
     "ng": "ng",
     "start": "ng serve --host www.ibloper.com --port 443",

@@ -1,1 +1,11 @@
-<p>poste works!</p>
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon3">Titre :</span>
+  </div>
+  <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+</div>
+<div class="bg-white">
+    <quill-editor [styles]="{height: '200px'}" (onEditorChanged)="changeEditor($event)"></quill-editor>
+</div>
+
+<div [innerHTML]="this.editorText" class="mt-3"></div>

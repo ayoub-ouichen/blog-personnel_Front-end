@@ -47,6 +47,7 @@ import { SJwtIntercepteurService } from "../app/services//jwt-intercepteurServic
 import { SAuthentificationService as AuthGuard } from './services/authService/s-authentification.service';
 import { CookieService } from 'ngx-cookie-service';
 import { CookieModule } from "ngx-cookie";
+import { QuillModule } from 'ngx-quill';
 
 @NgModule({
   imports: [

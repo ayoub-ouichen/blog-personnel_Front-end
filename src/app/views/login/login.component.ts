@@ -4,9 +4,6 @@ import { SPersonService } from 'src/app/services/personService/s-person.service'
 import { utilisateur } from 'src/app/Classes/utilisateur';
 import { SAuthentificationService } from "../../services/authService/s-authentification.service";
 import { Router } from '@angular/router';
-import { CookieService } from 'ngx-cookie';
-import { error } from '@angular/compiler/src/util';
-import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-dashboard',
@@ -19,7 +16,7 @@ export class LoginComponent {
   person: utilisateur;
   loginForm: FormGroup;
   
-  constructor(private cookieService: CookieService, private router: Router, private formBuilder: FormBuilder, private sperson: SPersonService, private authService: SAuthentificationService) {
+  constructor(private router: Router, private formBuilder: FormBuilder, private sperson: SPersonService, private authService: SAuthentificationService) {
     this.loginForm = this.formBuilder.group({
       u_mail: ['', [Validators.required, Validators.email]],
       u_pwd: ['', [Validators.required, Validators.minLength(6)]]

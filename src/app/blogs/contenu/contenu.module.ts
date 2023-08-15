@@ -6,11 +6,13 @@ import { ContenuRoutingModule } from './contenu-routing.module';
 import { PosteComponent } from "./poste/poste.component";
 import { QuillModule } from 'ngx-quill';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SanitizehtmlpipePipe } from 'src/app/pipes/sanitizehtml/sanitizehtmlpipe.pipe';
 
 
 @NgModule({
   declarations: [
-    PosteComponent
+    PosteComponent,
+    SanitizehtmlpipePipe
   ],
   imports: [
     FormsModule,

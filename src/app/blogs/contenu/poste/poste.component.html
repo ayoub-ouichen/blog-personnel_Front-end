@@ -5,7 +5,7 @@
   <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
 </div>
 <div class="bg-white">
-    <quill-editor [styles]="{height: '200px'}" (onEditorChanged)="changeEditor($event)"></quill-editor>
+    <quill-editor [modules]="editor_modules" [styles]="{height: '200px'}" (onEditorChanged)="changeEditor($event)"></quill-editor>
 </div>
 
 <div class="ql-container ql-snow border-0">

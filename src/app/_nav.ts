@@ -3,7 +3,7 @@ import { INavData } from '@coreui/angular';
 export const navItems: INavData[] = [
   {
     name: 'Voir le blog',
-    url: '/mon-blog',
+    url: '/lire-blog',
     icon: 'cil-external-link'
     // badge: {
     //   variant: 'info',
@@ -23,11 +23,6 @@ export const navItems: INavData[] = [
     name: 'Postes',
     url: '/contenu/postes',
     icon: 'fa fa-th-list'
-  },
-  {
-    name: 'Pages',
-    url: '/contenu/pages',
-    icon: 'fa fa-file'
   },
   {
     divider: true

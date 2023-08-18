@@ -1,16 +1,20 @@
-<div class="input-group mb-3">
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="basic-addon3">Titre :</span>
+<form [formGroup]="this.blog" (ngSubmit)="enregisterPoste()">
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon3">Titre :</span>
+    </div>
+    <input type="text" class="form-control" formControlName="titre" id="basic-url" aria-describedby="basic-addon3">
   </div>
-  <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
-</div>
-<div class="bg-white">
-    <quill-editor [modules]="editor_modules" [styles]="{height: '200px'}" (onEditorChanged)="changeEditor($event)"></quill-editor>
-</div>
-
+  <div class="bg-white">
+      <quill-editor [modules]="editor_modules" [styles]="{height: '55vh'}" (onEditorChanged)="changeEditor($event)"></quill-editor>
+  </div>
+  <button type="submit" [disabled]="!contenuValid()" class="btn btn-outline-primary float-right m-3">Enregistrer</button>
+</form>
+<!-- this work as contenaire to quill content -->
+<!--
 <div class="ql-container ql-snow border-0">
-  <div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Insert text here ..." spellcheck="false">
+  <div class="ql-editor" data-gramm="false" contenteditable="false" data-placeholder="Insert text here ..." spellcheck="false">
     <div [innerHTML]="this.editorText | sanitizehtmlpipe" class="mt-3"></div>
   </div>
 </div>
-<div id="editor"></div>
+-->

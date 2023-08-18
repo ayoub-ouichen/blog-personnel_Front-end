@@ -9,6 +9,7 @@ import { P500Component } from './views/error/500.component';
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
 import { AuthGuardService as AuthGuard } from './services/guards/authGuard/auth-guard.service';
+import { LireBlogComponent } from './pages/lire-blog/lire-blog.component';
 
 
 export const routes: Routes = [
@@ -43,6 +44,13 @@ export const routes: Routes = [
     component: RegisterComponent,
     data: {
       title: 'Register Page'
+    }
+  },
+  {
+    path: 'lire-blog',
+    component: LireBlogComponent,
+    data: {
+      title: 'Lire blog'
     }
   },
   {

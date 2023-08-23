@@ -8,7 +8,9 @@
   <div class="bg-white">
       <quill-editor [modules]="editor_modules" [styles]="{height: '55vh'}" (onEditorChanged)="changeEditor($event)"></quill-editor>
   </div>
-  <button type="submit" [disabled]="!contenuValid()" class="btn btn-outline-primary float-right m-3">Enregistrer</button>
+  <button type="submit" [disabled]="!contenuValid()" class="btn btn-outline-primary float-right m-3">
+    <i class="fa fa-paper-plane-o mr-1" aria-hidden="true"></i> Publier
+  </button>
 </form>
 <!-- this work as contenaire to quill content -->
 <!--

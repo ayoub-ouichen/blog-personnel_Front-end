@@ -15,4 +15,8 @@ export class SPosteService {
   ajouterPoste(poste: Poste):Observable<any> {
     return this.httpClient.post(API_URL + 'nouveau-poste', poste);
   }
+
+  lirePoste() : Observable<Poste> {
+    return this.httpClient.get<Poste>(API_URL + 'lire-poste');
+  }
 }

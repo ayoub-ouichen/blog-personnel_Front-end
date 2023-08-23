@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter&family=Montserrat&family=Pacifico&family=Permanent+Marker&family=Raleway&family=Roboto+Condensed&display=swap');
+
+$font-family_1: 'Bitter', serif;
+$font-family_2: 'Montserrat', sans-serif;
+$font-family_3: 'Pacifico', cursive;
+$font-family_4: 'Permanent Marker', cursive;
+$font-family_5: 'Raleway', sans-serif;
+$font-family_6: 'Roboto Condensed', sans-serif;
+
+/* Set droplist names - -item is the currently selected font, -label is the font's appearance in the droplist*/
+/****************************************************
+    Set the font-family content used for the HTML content.
+    *****************************************************/
+.ql-snow {
+	.ql-picker.ql-font {
+		.ql-picker-label[data-value=''] {
+			&::before {
+				content: 'Default';
+			}
+		}
+		.ql-picker-item[data-value=''] {
+			&::before {
+				content: 'Default';
+			}
+		}
+		.ql-picker-label[data-value='Bitter'] {
+			&::before {
+				content: 'Bitter';
+				font-family: $font-family_1;
+			}
+		}
+		.ql-picker-item[data-value='Bitter'] {
+			&::before {
+				content: 'Bitter';
+				font-family: $font-family_1;
+			}
+		}
+		.ql-picker-label[data-value='Montserrat'] {
+			&::before {
+				content: 'Montserrat';
+				font-family: $font-family_2;
+			}
+		}
+		.ql-picker-item[data-value='Montserrat'] {
+			&::before {
+				content: 'Montserrat';
+				font-family: $font-family_2;
+			}
+		}
+		.ql-picker-label[data-value='Pacifico'] {
+			&::before {
+				content: 'Pacifico';
+				font-family: $font-family_3;
+			}
+		}
+		.ql-picker-item[data-value='Pacifico'] {
+			&::before {
+				content: 'Pacifico';
+				font-family: $font-family_3;
+			}
+		}
+
+        
+		.ql-picker-label[data-value='Permanent-Marker'] {
+			&::before {
+				content: 'Permanent Marker';
+				font-family: $font-family_4;
+			}
+		}
+		.ql-picker-item[data-value='Permanent-Marker'] {
+			&::before {
+				content: 'Permanent Marker';
+				font-family: $font-family_4;
+			}
+		}
+
+        
+		.ql-picker-label[data-value='Raleway'] {
+			&::before {
+				content: 'Raleway';
+				font-family: $font-family_5;
+			}
+		}
+		.ql-picker-item[data-value='Raleway'] {
+			&::before {
+				content: 'Raleway';
+				font-family: $font-family_5;
+			}
+		}
+
+        
+		.ql-picker-label[data-value='Roboto-Condensed'] {
+			&::before {
+				content: 'Roboto Condensed';
+				font-family: $font-family_6;
+			}
+		}
+		.ql-picker-item[data-value='Roboto-Condensed'] {
+			&::before {
+				content: 'Roboto Condensed';
+				font-family: $font-family_6;
+			}
+		}
+	}
+}
+//'Pacifico','Permanent Marker','Raleway','Roboto Condensed'
+.ql-font-Bitter {
+	font-family: $font-family_1;
+}
+.ql-font-Montserrat {
+	font-family: $font-family_2;
+}
+.ql-font-Pacifico {
+	font-family: $font-family_3;
+}
+
+.ql-font-Permanent-Marker {
+	font-family: $font-family_4;
+}
+
+.ql-font-Raleway {
+	font-family: $font-family_5;
+}
+
+.ql-font-Roboto-Condensed {
+	font-family: $font-family_6;
+}

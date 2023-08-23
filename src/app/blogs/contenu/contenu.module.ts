@@ -11,8 +11,7 @@ import { SanitizehtmlpipePipe } from 'src/app/pipes/sanitizehtml/sanitizehtmlpip
 
 @NgModule({
   declarations: [
-    PosteComponent,
-    SanitizehtmlpipePipe
+    PosteComponent
   ],
   imports: [
     FormsModule,

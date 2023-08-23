@@ -47,6 +47,8 @@ import { SJwtIntercepteurService } from "../app/services//jwt-intercepteurServic
 import { SAuthentificationService as AuthGuard } from './services/authService/s-authentification.service';
 import { CookieService } from 'ngx-cookie-service';
 import { CookieModule } from "ngx-cookie";
+import { LireBlogComponent } from './pages/lire-blog/lire-blog.component';
+import { SanitizehtmlpipePipe } from './pipes/sanitizehtml/sanitizehtmlpipe.pipe';
 
 @NgModule({
   imports: [
@@ -75,7 +77,9 @@ import { CookieModule } from "ngx-cookie";
     P404Component,
     P500Component,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    LireBlogComponent,
+    SanitizehtmlpipePipe
   ],
   providers: [
     // {

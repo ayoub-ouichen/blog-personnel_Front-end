@@ -9,6 +9,7 @@ export class Poste {
     p_date_publication: Date;
     p_etat: String;
     p_lien: String;
+    p_lire_temps: Number;
 
     constructor() {
         this.p_id = 0;
@@ -20,5 +21,6 @@ export class Poste {
         this.p_date_publication = new Date();
         this.p_etat = "";
         this.p_lien = "";
+        this.p_lire_temps = 0;
     }
 }

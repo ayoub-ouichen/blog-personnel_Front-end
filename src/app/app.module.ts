@@ -49,6 +49,8 @@ import { CookieService } from 'ngx-cookie-service';
 import { CookieModule } from "ngx-cookie";
 import { LireBlogComponent } from './pages/lire-blog/lire-blog.component';
 import { SanitizehtmlpipePipe } from './pipes/sanitizehtml/sanitizehtmlpipe.pipe';
+import { DateAsAgoPipe } from './pipes/DateAsAgo/date-as-ago-pipe.pipe';
+import { NgbPopoverModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   imports: [
@@ -69,7 +71,8 @@ import { SanitizehtmlpipePipe } from './pipes/sanitizehtml/sanitizehtmlpipe.pipe
     IconSetModule.forRoot(),
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbPopoverModule
   ],
   declarations: [
     AppComponent,
@@ -79,7 +82,8 @@ import { SanitizehtmlpipePipe } from './pipes/sanitizehtml/sanitizehtmlpipe.pipe
     LoginComponent,
     RegisterComponent,
     LireBlogComponent,
-    SanitizehtmlpipePipe
+    SanitizehtmlpipePipe,
+    DateAsAgoPipe
   ],
   providers: [
     // {

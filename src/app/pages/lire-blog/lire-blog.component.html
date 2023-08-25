@@ -1,38 +1,30 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#"><i class="fa fa-leanpub" aria-hidden="true"></i> ibloper</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled">Disabled</a>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </div>
-</nav>
+<app-header
+  [navbarBrandRouterLink]="['/dashboard']"
+  [fixed]="true"
+  [navbarBrandFull]="{src: 'assets/img/brand/logo.svg', width: 89, alt: 'iBloper Logo'}"
+  [navbarBrandMinimized]="{src: 'assets/img/brand/sygnet.svg', width: 30, height: 30, alt: 'iBloper Logo'}"
+  [sidebarToggler]="false"
+  [asideMenuToggler]="false"
+  [mobileAsideMenuToggler]="false"
+  [mobileSidebarToggler]="true">
+  <ul class="nav navbar-nav d-md-down-none">
+    <li class="nav-item px-3">
+      <a class="nav-link " href="#">Dashboard</a>
+    </li>
+    <li class="nav-item px-3">
+      <a class="nav-link" href="#">Blogs</a>
+    </li>
+    <li class="nav-item px-3">
+      <a class="nav-link" href="#">Settings</a>
+    </li>
+    <li>
+      <div class="search-box mr-4">
+        <button class="btn-search text-dark"><i class="fa fa-search" aria-hidden="true"></i></button>
+        <input type="text" class="input-search" placeholder="Tapez pour rechercher...">
+      </div>
+    </li>
+  </ul>
+</app-header>
 <div class="app-body">
   <main class="main d-flex align-items-center">
     <div class="container">
@@ -42,16 +34,24 @@
             <div class="card-body p-4">
               <div class="ql-container ql-snow border-0">
                 <div class="mx-5">
-                  <h1>
+                  <h1 class="my-4">
                     <strong class="display-4 font-weight-bold ql-font-Roboto-Condensed">
                       {{ this.poste.p_titre }}
                     </strong>
                   </h1>
                   <div class="card">
                     <div class="card-body p-1 clearfix list-group-item-accent-info">
-                      <img src="assets/img/avatars/9.jpg" class="p-2 font-2xl mr-3 float-left img-circle">
-                      <div class="h5 text-primary mb-0 mt-2">{{ this.poste.p_auteur }}</div>
-                      <div class="text-muted font-weight-bold font-xs">{{ this.poste.p_lire_temps }} min</div>
+                      <img [ngbPopover]="popContent" [popoverTitle]="popTitle" triggers="mouseenter:mouseleave" placement="bottom" src="assets/img/avatars/9.jpg" class="p-2 font-2xl mr-3 float-left img-circle">
+                      <div class="h5 mb-0 mt-2">
+                        <ng-template #popContent><b>{{followers}}</b> Suiveurs</ng-template>
+                        <ng-template #popTitle><b [innerHTML]="html"></b></ng-template>
+                        <span [ngbPopover]="popContent" [popoverTitle]="popTitle" triggers="mouseenter:mouseleave" placement="bottom">
+                          {{ this.poste.p_auteur }}
+                        </span>
+                        <strong> . </strong>
+                        <a href="" class="card-link text-success">Suivre</a>
+                        <div class="text-muted font-weight-bold font-xs mt-2">{{ this.poste.p_lire_temps }} min de lecture . {{ this.poste.p_date_creation | dateAsAgoPipe }}</div>
+                      </div>
                     </div>
                   </div>
                 </div>
